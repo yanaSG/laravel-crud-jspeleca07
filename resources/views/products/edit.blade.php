@@ -70,6 +70,16 @@
                         </div>
                     </div>
                     <div class="mb-3 row">
+                        <label for="imgurl" class="col-md-4 colform-label text-md-end text-start">Upload Image</label>
+                        <div class="col-md-6">
+                            <input type="file" class="form-control @error('imgurl') is-invalid @enderror" id="imgurl"
+                                name="imgurl" value="{{ $product->imgurl }}" />
+                            @error('imgurl')
+                            <span class="text-danger">{{ $message }}</span>
+                            @enderror
+                        </div>
+                    </div>
+                    <div class="mb-3 row justify-content-center">
                         <input type="submit" class="col-md-3 offsetmd-5 btn btn-primary" value="Update">
                     </div>
                 </form>
