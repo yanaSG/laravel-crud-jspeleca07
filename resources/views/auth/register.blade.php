@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container mt-5 rounded-5 p-5 shadow">
+<div class="container w-50 p-5">
     <h2>Register</h2>
     <form method="POST" action="{{ url('/register') }}">
         @csrf

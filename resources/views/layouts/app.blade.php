@@ -12,12 +12,12 @@
 <body> 
     <nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{{ route('products.index') }}">My Products</a>
+            <a class="navbar-brand" href="{{ route('products.index') }}"></a>
             <div class="ms-auto">
                 @auth
                     <form method="POST" action="{{ route('logout') }}">
                         @csrf
-                        <button type="submit" class="btn btn-outline-danger btn-sm">Logout</button>
+                        <button type="submit" class="btn btn-primary btn-sm">Logout</button>
                     </form>
                 @endauth
             </div>
@@ -25,7 +25,7 @@
     </nav>
 
     <div class="container">
-        <h3 class="mb-3">Simple Laravel 11 CRUD Application Tutorial</h3>
+        <h3 class="mb-3 mx-auto">Simple Laravel 11 CRUD Application Tutorial</h3>
 
         {{-- Flash Messages --}}
         @if (session('success'))
