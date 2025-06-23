@@ -27,7 +27,7 @@ class UpdateProductRequest extends FormRequest
             'quantity' => 'required|integer|min:1|max:10000',
             'price' => 'required',
             'description' => 'nullable|string',
-            'imgurl' => 'nullable|string'
+            'imgurl' => 'nullable|image'
         ];
     }
 }
