@@ -7,9 +7,15 @@ use App\Http\Requests\UpdateProductRequest;
 use Illuminate\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Storage;
+use App\Http\Controllers\Controller;
 
 class ProductController extends Controller
 {
+
+   public function __construct()
+   {
+      $this->middleware('auth');
+   }
  /**
 * Display a listing of the resource.
 */
